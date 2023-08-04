@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  height: 500vh;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000d7;
+  padding: 10px;
+  box-shadow: 1px 1px 1px 1px rgb(231, 221, 209);
+  z-index: 8;
+}
+
+.logo i {
+  color: #2de627;
+  font-size: 30px;
+}
+
+.search-icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30%;
+  padding: 5px 0px 5px 0px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.search-icon input {
+  width: 95%;
+  outline: none;
+  border: none;
+}
+
+.search-icon i {
+  color: black;
+  cursor: pointer;
+  margin-right: 5px;
+  padding: 2px;
+}
+
+.links > li {
+  display: inline-block;
+  color: white;
+  padding: 3px 10px 3px 10px;
+  margin-left: 25px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 2px;
+}
+
+.links a {
+  text-decoration: none;
+  color: white;
+}
+
+.sub-menu {
+  width: 150px;
+  position: absolute;
+  background-color: #000000d7;
+  display: none;
+  padding-top: 10px;
+  margin-top: 5px;
+  margin-left: -10px;
+}
+
+.link-menu .seta {
+  font-size: 7px;
+  margin-left: -3px;
+}
+
+.sub-menu li {
+  list-style: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 10px 10px 10px;
+  border-radius: 1px;
+  transition: background 0.4s;
+}
+
+.link-menu:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu li:hover,
+.links li:hover {
+  background-color: #2de627;
+}
+
+/*link-estilos musicais*/
+
+.menu-estilo {
+  margin-top: 15vh;
+  display: flex;
+  width: 1070px;
+  margin: 15vh auto auto auto;
+}
+
+.menu-estilo > li {
+  display: inline-block;
+  list-style: none;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 10px;
+  border: solid 1px #f1ede5;
+  margin-left: 10px;
+  cursor: pointer;
+  
+}
+.menu-estilo li:hover {
+  background-color: #2de627;
+}
+
+.menu-estilo a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu-estilo .seta {
+  font-size: 7px;
+}
+
+.menu-estilo span {
+  cursor: pointer;
+}
+
+.sub-menu-estilo {
+  position: absolute;
+  width: 150px;
+  background-color: white;
+  margin-top: 5px;
+  display: none;
+}
+
+.sub-menu-estilo li {
+  display: block;
+  padding: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.sub-menu-estilo-li:hover .sub-menu-estilo {
+  display: block;
+}
+
+/* imagens de destaque*/
+
+.dstq-img {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.img-principal {
+  overflow: hidden;
+  width: 1070px;
+  height: 400px;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.img-principal img {
+  width: 1070px;
+  height: 400px;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.img-principal img:hover {
+  transform: scale(1.1);
+}
+
+.sub-imagens {
+  display: inline-block;
+  overflow: hidden;
+  width: 250px;
+  border-radius: 10px;
+  margin: 0px 10px;
+  margin-top: 5px;
+}
+
+.sub-imagens-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.sub-imagens img {
+  margin-top: 10px;
+  width: 250px;
+  height: 150px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.sub-imagens img:hover {
+  transform: scale(1.1);
+}
+
+/*estilo para tela grande*/
+
+@media (max-width: 1150px) and (min-width:1000px) {
+
+body {
+  background-color: blue;
+}
+
+.menu-estilo {
+  margin-top: 15vh;
+  display: flex;
+  width: 900px;
+  margin: 15vh auto auto auto;
+}
+
+  .img-principal {
+    width: 900px;
+  }
+
+  .img-principal img {
+   width: 900px;
+  }
+
+  .sub-imagens {
+    width: 210px;
+  }
+
+  .sub-imagens img {
+    width: 210px;
+    height: 130px;
+  }
+
+}
+
+/*estilo para tela media*/
+
+@media (max-width:999px) and (min-width:839px) {
+  
+  body {
+    background-color: red;
+  }
+
+   .menu-estilo {
+    margin-top: 15vh;
+    display: flex;
+    width: 750px;
+    margin: 15vh auto auto auto;
+   }
+
+  .img-principal {
+    width: 750px;
+  }
+
+  .img-principal img {
+   width: 750px;
+  }
+
+  .sub-imagens {
+    width: 173px;
+  }
+
+  .sub-imagens img {
+    width: 173px;
+    height: 130px;
+  }
+
+}
+
+/*tela pequena*/
+
+@media (max-width:840px) {
+  
+  body {
+    background-color: rgb(13, 255, 0);
+  }
+
+   .menu-estilo {
+    margin-top: 15vh;
+    display: flex;
+    width: 750px;
+    margin: 15vh auto auto auto;
+   }
+
+  .img-principal {
+    width: 750px;
+  }
+
+  .img-principal img {
+   width: 750px;
+  }
+
+  .sub-imagens {
+    width: 173px;
+  }
+
+  .sub-imagens img {
+    width: 173px;
+    height: 130px;
+  }
+ 
+}
