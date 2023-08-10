@@ -5,6 +5,7 @@
 }
 
 body {
+  background-color: #313131;
   height: 500vh;
 }
 
@@ -18,7 +19,7 @@ body {
   width: 100%;
   background-color: #000000d7;
   padding: 10px;
-  box-shadow: 1px 1px 1px 1px rgb(231, 221, 209);
+  box-shadow: 1px 1px 1px 1px rgba(202, 175, 170, 0.211);
   z-index: 8;
 }
 
@@ -113,18 +114,19 @@ body {
   font-size: 18px;
   padding: 5px;
   border-radius: 10px;
-  border: solid 1px #f1ede5;
+  border: solid 1px #41ca2f55;
   margin-left: 10px;
   cursor: pointer;
-  
+  color: white;
 }
 .menu-estilo li:hover {
   background-color: #2de627;
+  color: #fff;
 }
 
-.menu-estilo a {
+.menu-estilo li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 .menu-estilo .seta {
@@ -138,7 +140,7 @@ body {
 .sub-menu-estilo {
   position: absolute;
   width: 150px;
-  background-color: white;
+  background-color: #000000cc;
   margin-top: 5px;
   display: none;
 }
@@ -193,7 +195,6 @@ body {
 .sub-imagens-container {
   display: flex;
   justify-content: center;
-  
 }
 
 .sub-imagens img {
@@ -210,25 +211,20 @@ body {
 
 /*estilo para tela grande*/
 
-@media (max-width: 1150px) and (min-width:1000px) {
-
-body {
-  background-color: blue;
-}
-
-.menu-estilo {
-  margin-top: 15vh;
-  display: flex;
-  width: 900px;
-  margin: 15vh auto auto auto;
-}
+@media (max-width: 1150px) and (min-width: 1000px) {
+  .menu-estilo {
+    margin-top: 15vh;
+    display: flex;
+    width: 900px;
+    margin: 15vh auto auto auto;
+  }
 
   .img-principal {
     width: 900px;
   }
 
   .img-principal img {
-   width: 900px;
+    width: 900px;
   }
 
   .sub-imagens {
@@ -239,30 +235,24 @@ body {
     width: 210px;
     height: 130px;
   }
-
 }
 
 /*estilo para tela media*/
 
-@media (max-width:999px) and (min-width:839px) {
-  
-  body {
-    background-color: red;
-  }
-
-   .menu-estilo {
+@media (max-width: 999px) and (min-width: 839px) {
+  .menu-estilo {
     margin-top: 15vh;
     display: flex;
     width: 750px;
     margin: 15vh auto auto auto;
-   }
+  }
 
   .img-principal {
     width: 750px;
   }
 
   .img-principal img {
-   width: 750px;
+    width: 750px;
   }
 
   .sub-imagens {
@@ -273,39 +263,125 @@ body {
     width: 173px;
     height: 130px;
   }
-
 }
 
 /*tela pequena*/
 
-@media (max-width:840px) {
-  
-  body {
-    background-color: rgb(13, 255, 0);
-  }
-
-   .menu-estilo {
+@media (max-width: 840px) {
+  .menu-estilo {
     margin-top: 15vh;
     display: flex;
-    width: 750px;
+    width: 700px;
     margin: 15vh auto auto auto;
-   }
+  }
 
   .img-principal {
-    width: 750px;
+    width: 700px;
   }
 
   .img-principal img {
-   width: 750px;
+    width: 700px;
   }
 
   .sub-imagens {
-    width: 173px;
+    width: 153px;
   }
 
   .sub-imagens img {
-    width: 173px;
+    width: 153px;
     height: 130px;
   }
- 
+}
+
+.acessadas {
+  margin: 50px auto auto auto;
+  width: 1070px;
+}
+
+/* musicas mais acessadas*/
+
+.acessadas h1 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.acessadas h1::before {
+  content: "";
+  width: 100%;
+  height: 2px;
+  display: block;
+  background-color: #2de627;
+  margin-bottom: 10px;
+}
+
+.music-list-container {
+   display: grid;
+   grid-template-columns: 3fr 3fr 3fr;
+   gap: 10px;
+   width: 1050px;
+   margin: auto;
+   
+}
+
+
+.music-list-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.music-list {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 7px 90px 7px 0px;
+  border-radius: 10px;
+  transition: background 0.3s;
+  display: none;
+}
+
+.music-list:hover {
+  background-color: #00000068;
+}
+
+.music-list span {
+  text-align: center;
+  width: 42px;
+  font-weight: 700;
+  font-size: 42px;
+  color: rgb(179, 172, 172);
+}
+
+.music-list p {
+  margin-top: 2px;
+}
+
+.music-list .artist {
+  color: #2de627;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.music-list .song {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.list-button  {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.list-button button{
+   width: 300px;
+   padding: 5px 5px 5px 5px;
+   background-color: #068d948c;
+   color: white;
+   border-radius: 5px;
+   cursor: pointer;
+   border: none;
+}
+
+.list-button button:hover {
+  color: #2de627;
+  transform: scale(1.1);
 }
