@@ -316,7 +316,7 @@ body {
 
 .music-list-container {
    display: grid;
-   grid-template-columns: 3fr 3fr 3fr;
+   grid-template-columns: auto auto auto;
    gap: 10px;
    width: 1050px;
    margin: auto;
@@ -329,6 +329,10 @@ body {
   color: white;
 }
 
+.list-music {
+  display: none;
+}
+
 .music-list {
   display: flex;
   align-items: center;
@@ -336,11 +340,14 @@ body {
   padding: 7px 90px 7px 0px;
   border-radius: 10px;
   transition: background 0.3s;
-  display: none;
 }
 
 .music-list:hover {
   background-color: #00000068;
+}
+
+.music-list:hover  .music-list span {
+   color: #2de627;
 }
 
 .music-list span {
@@ -349,6 +356,7 @@ body {
   font-weight: 700;
   font-size: 42px;
   color: rgb(179, 172, 172);
+  margin-right: 10px;
 }
 
 .music-list p {
@@ -367,7 +375,7 @@ body {
 }
 
 .list-button  {
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
