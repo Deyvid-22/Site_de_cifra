@@ -1,32 +1,36 @@
-let list_music = document.querySelectorAll('.list-music');
-let button = document.querySelector('.list-button')
-let cor = document.querySelectorAll('.cor')
+// pega todos os elementos com a classe list-music
+const listMusicElements = document.querySelectorAll('.list-music');
+const button = document.querySelector('.list-button');
+//ele pega o botao com a classe list-button
+const corElements = document.querySelectorAll('.cor');
 
+//ele colocar um ouvinte de evento de click no botao
 button.addEventListener('click', clicar);
 
+let a = 12
+let b = 6
 
-let a = 0
-let b = 12
-while (a < 9) {
-    list_music[a].style.display = 'flex'
-    a++
-}
-function clicar() {
-    for (let c = 0; c < b; c++) {
-        list_music[c].style.display = 'flex'
+// passa por cada elemento com a classe list.music
+listMusicElements.forEach(function(listMusicElement,i){
+  //se o indice i for menor que b exibe o elemento 
+  if(i < b){
+    listMusicElements[i].style.display = 'flex'
+  }
+})
+
+function clicar(){
+  listMusicElements.forEach(function(listMusicElement,i){
+    //se o indice for menor que a quando apertar o botao exibe o elemento
+    if(i < a){
+      listMusicElements[i].style.display = 'flex'
+      
     }
-    b = b + 6 
+  });
+  a = a + 6 
 }
 
-for(let x = 0; x < list_music.length;x++){
 
-list_music[x].addEventListener('mouseover', colorir)
-list_music[x].addEventListener('mouseout', descolorir)
-function colorir() {
-    cor[x].style.color = '#2de627'
-}
-function descolorir() {
-   cor[x].style.color = ''
-}
 
-}
+
+
+
